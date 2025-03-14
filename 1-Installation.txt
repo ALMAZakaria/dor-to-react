@@ -1,0 +1,232 @@
+1-Download VS Code
+
+2- Go to setting in vs and tap json copy and past the following Json code : https://github.com/alielrayes/vscode-settings/blob/master/settings.json
+
+
+3- Download Node.js:
+
+https://github.com/alielrayes/vscode-settings/blob/master/settings.json
+-go to terminal : controle+j add to it
+-Look for Terminal › Integrated › Automation Profile: Windows  : Edit Json file 
+
+-----------------------------------------------------------------------------------------------------------
+
+// settings.json
+//Download extensions
+// Ayu
+// Material Icon Theme
+// Prettier - Code formatter
+// ESLint
+{
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "none",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.fontSize": 16,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "ejs": "html",
+  },
+  "terminal.integrated.env.windows": {},
+  "emmet.excludeLanguages": [
+    "markdown"
+  ],
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.linkedEditing": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.decorations.badges": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false,
+  "git.ignoreMissingGitWarning": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "window.customMenuBarAltFocus": true,
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.stickyTabStops": true,
+  "editor.tabSize": 2,
+  "git.enableSmartCommit": true,
+  "[dart]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "editor.minimap.enabled": false,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "ا": true,
+    "ه": true
+  },
+  "files.autoSave": "afterDelay",
+  "explorer.compactFolders": false,
+  "dart.previewFlutterUiGuides": true,
+  "dart.showInspectorNotificationsForWidgetErrors": false,
+  "workbench.colorTheme": "Ayu Dark",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.scrollbar.verticalScrollbarSize": 19,
+
+  "editor.scrollbar.horizontalScrollbarSize": 19,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": false,
+  "explorer.copyRelativePathSeparator": "/",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "editor.unicodeHighlight.allowedLocales": {
+    "es": true
+  },
+  "window.menuBarVisibility": "compact",
+  "dart.flutterHotReloadOnSave": "all",
+  "dart.hotReloadOnSave": "all",
+  //  "editor.guides.bracketPairs":"active",
+  "terminal.integrated.profiles.windows": {
+    "Node.js": {
+      "path": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [] // Add startup arguments as needed.
+    }
+  },
+
+// Make Node.js the default shell (if the property already exists, update its value).
+"terminal.integrated.defaultProfile.windows": "Node.js",
+"terminal.integrated.automationProfile.windows": {
+  
+},
+}
+
+
+-----------------------------------------------------------------------------------------------------------
+
+4- Download GIT
+
+
+5-Go back to vs code click: control+J --> cd "the foder path you  want to work in"
+
+6- Create your fist react app : npx create-react-app name-of-reactapp
+
+cmd npm i --> to have cmd on terminale
+
+7-Add rooter in order to have multiple pages
+
+npm install react-router-dom
+--------------------------------------------------------------------------------------------------
+8-Download  in vs code : 
+Extensions for React & JavaScript
+
+JS JSX Snippets				 --> shirtcut to create coponent
+ESLint 					 --> shows error before execute the code
+JavaScript (ES6) code snippets		 --> shirtcut for js
+Wrap Console Log
+Rainbow Brackets 2
+
+
+--------------------------------------------------------------------------------------------------
+9-In order to create New componame create new file in src -> pages -> nameofpage.js (NameOfcomponent.js) entre to file and put rfc + entre (reactfunct) and past your page content bitween return ( <> "Past our page content here"</>)
+
+9-2 Go to index.js and add the following codes:  https://reactrouter.com/en/main/start/tutorial
+
+import Home from './pages/home';
+import Product from './pages/product';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {/*You Make path to your pages here don't forget to import the pags above*/}
+{
+
+    path: "/product",
+    element: <Home />,
+    errorElement: <h1>Error Message...</h1>
+
+  },
+{
+
+    path: "/",
+    element: <Product />,
+    errorElement: <h1>Error Message...</h1>
+
+  },
+]);
+
+{/*And the following in the ReadtDom*/}
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+
+
+
+
+Extensions for HTML & CSS
+
+Prettier - Code formatter
+html tag wrapper
+Auto Rename Tag
+Extensions for Theme
+
+Ayu
+Material Icon Theme
+--------------------------------------------------------------------------------------------------
+
+
+10-Go to packege.json file in the project and modifile the line script(run&build):
+
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+			.
+			Exemple:
+
+
+"scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }, 
+
+
+--------------------------------------------------------------------------------------------------
+
+					11- Deploy to Firebase
+--------------------------------------------------------------------------------------------------
+1-1st execute the commande to create a new folder that contain all you file in a structured way:
+
+	npm run build    --> do it every time you make a change in the code
+2-Now go to your Firebase and try to make new project:
+
+		*After you config the name of the project and everything  : go to Build --> Hosting --> Get started -->
+
+		
+
+		
+3-
+
+
